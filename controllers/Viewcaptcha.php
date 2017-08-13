@@ -20,8 +20,6 @@ class Viewcaptcha extends CI_Controller {
 
 		if( !$captcha_config ) exit();
 
-		//p($captcha_config);
-
 		$this->session->unset_userdata('captcha_config');
 		
 		// Use milliseconds instead of seconds
@@ -35,7 +33,6 @@ class Viewcaptcha extends CI_Controller {
 		// Create captcha object
 		$captcha = imagecreatefrompng($background);
 
-		//imagepng($captcha);
 		
 		$color = $this->captcha->hex2rgb($captcha_config['color']);
 
