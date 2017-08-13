@@ -4,44 +4,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Captcha {
 
     public function main($config = array()) {
-        
+
         $this->load->helper('url');
         // Check for GD library
         if( !function_exists('gd_info') ) {
             throw new Exception('Required GD library is missing');
         }
         
+        // Change to your config
         $bg_path = FCPATH.'public/captcha'.'/backgrounds/';
         $font_path = FCPATH.'public/captcha'. '/fonts/';
         // Default values
-    $captcha_config = array(
-        'code' => '',
-        'min_length' => 5,
-        'max_length' => 5,
-        'backgrounds' => array(
-            $bg_path . '45-degree-fabric.png',
-            $bg_path . 'cloth-alike.png',
-            $bg_path . 'grey-sandbag.png',
-            $bg_path . 'kinda-jean.png',
-            $bg_path . 'polyester-lite.png',
-            $bg_path . 'stitched-wool.png',
-            $bg_path . 'white-carbon.png',
-            $bg_path . 'white-wave.png'
-        ),
-        'fonts' => array(
-            $font_path . 'times_new_yorker.ttf'
-        ),
-        'characters' => 'ABCDEFGHJKLMNPRSTUVWXYZabcdefghjkmnprstuvwxyz23456789',
-        'min_font_size' => 14,
-        'max_font_size' => 18,
-        'color' => '#666',
-        'angle_min' => 0,
-        'angle_max' => 10,
-        'shadow' => true,
-        'shadow_color' => '#fff',
-        'shadow_offset_x' => -1,
-        'shadow_offset_y' => 1
-    );
+        $captcha_config = array(
+            'code' => '',
+            'min_length' => 5,
+            'max_length' => 5,
+            'backgrounds' => array(
+                $bg_path . '45-degree-fabric.png',
+                $bg_path . 'cloth-alike.png',
+                $bg_path . 'grey-sandbag.png',
+                $bg_path . 'kinda-jean.png',
+                $bg_path . 'polyester-lite.png',
+                $bg_path . 'stitched-wool.png',
+                $bg_path . 'white-carbon.png',
+                $bg_path . 'white-wave.png'
+                ),
+            'fonts' => array(
+                $font_path . 'times_new_yorker.ttf'
+                ),
+            'characters' => 'ABCDEFGHJKLMNPRSTUVWXYZabcdefghjkmnprstuvwxyz23456789',
+            'min_font_size' => 14,
+            'max_font_size' => 18,
+            'color' => '#666',
+            'angle_min' => 0,
+            'angle_max' => 10,
+            'shadow' => true,
+            'shadow_color' => '#fff',
+            'shadow_offset_x' => -1,
+            'shadow_offset_y' => 1
+            );
         
         // Overwrite defaults with custom config values
         if( is_array($config) ) {
@@ -81,7 +82,7 @@ class Captcha {
         return array(
             'code' => $captcha_config['code'],
             'image_src' => $image_src
-        );
+            );
         
     }
     public function hex2rgb($hex_str, $return_string = false, $separator = ',') {
