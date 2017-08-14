@@ -2,13 +2,7 @@
 
 This is a fork of Cory LaViska's simple, highly readable PHP captcha: https://github.com/claviska/simple-php-captcha
 
-This code is changed based on codeigniter-simple-php-captcha https://github.com/eblanshey/codeigniter-simple-php-captcha, libraries is newest version of simple-php-captcha
-
-This is the exact same script, modified to work with the CodeIgniter PHP framework.
-
-Copyright 2011 Cory LaViska for A Beautiful Site, LLC. (http://abeautifulsite.net/)
-
-Dual licensed under the MIT / GPLv2 licenses
+This code is changed based on codeigniter-simple-php-captcha https://github.com/eblanshey/codeigniter-simple-php-captcha since orgin package is no longer being maintained, libraries use the latest code of simple-php-captcha
 
 ## Original Demo
 
