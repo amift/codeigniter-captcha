@@ -1,4 +1,4 @@
-# codeigniter-captcha
+# A simple CodeIgniter PHP CAPTCHA script codeigniter-captcha
 
 This is a fork of Cory LaViska's simple, highly readable PHP captcha: https://github.com/claviska/simple-php-captcha
 
